@@ -12,12 +12,25 @@
                 return '我是'+this.color+this.name;
             }
         }
-        // 2.添加新的属性
+        // 2.添加新的属性（1）
         dataget.prototype.price = 100;
         dataget.prototype.rating = 0.3;
         dataget.prototype.getinfo=function(){
             return 'rating:'+this.rating+',price'+this.price;
         }
+        // 2.添加新的属性（2）
+        // dataget.prototype={
+        //     price:100,
+        //     rating:3,
+        //     getinfo:function(){
+        //         return 'rating:'+this.rating+',price:'+this.price;
+        //     }
+        // }
+        var newtoy = new dataget('webscan','black');
+        document.write(newtoy.name+"/"+newtoy.color);
+        document.write(newtoy.whatAreYou());
+        document.write(newtoy.price+newtoy.rating);
+        document.write(newtoy.getinfo());
     </script>
 </head>
 <body>
